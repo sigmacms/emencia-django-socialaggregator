@@ -26,7 +26,7 @@ class Aggregator(GenericAggregator):
         self.connector = GraphAPI(access_token)
 
     def search(self, query):
-        res = self.connector.get_object("%s/posts" % query)
+        res = self.connector.get_object("%s/posts?fields=message,from,created_time" % query)
         tz = timezone.get_current_timezone()
         datas = []
         for post in res['data']:
