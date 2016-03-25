@@ -128,11 +128,8 @@ class Ressource(models.Model):
     new_page = models.BooleanField(_('open in new page'), default=False)
 
     # META DATA
-    creation_date = models.DateTimeField(_('creation date'),
-                                         default=timezone.now(),
-                                         editable=False)
-    update_date = models.DateTimeField(_('update date'),
-                                       default=None)
+    creation_date = models.DateTimeField(_('creation date'), auto_now=True, editable=False)
+    update_date = models.DateTimeField(_('update date'),  default=None)
     updated = models.BooleanField(_('updated'), default=False)
 
     # Managers
