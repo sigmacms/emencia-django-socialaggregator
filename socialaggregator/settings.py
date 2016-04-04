@@ -15,8 +15,12 @@ EDSA_INSTAGRAM_ACCESS_TOKEN = 'FILLME'
 # Facebook access keys
 EDSA_FB_APP_ID = 'FILLME'
 EDSA_FB_APP_SECRET = 'FILLME'
+
 # Google+ access keys
 EDSA_GOOGLE_DEVELOPER_KEY = 'FILLME'
+
+# LinkedIn access keys
+EDSA_LINKEDIN_ACCESS_TOKEN = 'FILLME'
 
 # Pagination for ressource list in views
 EDSA_PAGINATION = 16
@@ -43,6 +47,10 @@ EDSA_PLUGINS = {
     "edsa_youtube_search": {
         "ENGINE": "socialaggregator.plugins.youtube_search_aggregator",
         "NAME": "Youtube search"
+    },
+    "edsa_linkedin": {
+        "ENGINE": "socialaggregator.plugins.linkedin_company_aggregator",
+        "NAME": "LinkedIn Company"
     },
 }
 
