@@ -21,7 +21,6 @@ class Aggregator(GenericAggregator):
         for value in res['values']:
             if 'updateContent' in value and 'companyStatusUpdate' in value['updateContent']:
                 share = value['updateContent']['companyStatusUpdate']['share']
-                pprint(share)
 
                 if 'content' in share and 'submittedUrl' in share['content']:
                     link, media_url_type = share['content']['submittedUrl'], 'link'
